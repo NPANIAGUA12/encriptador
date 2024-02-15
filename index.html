@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toggle.css" id="stylesheet">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header>
+        <a href="#" rel"="">
+            <img src="/img/Logo.png" alt="Logo" class="logo" id="alura">
+        </a>
+        <!--boton slider-->
+        <input type="checkbox" id="slider">
+        <label for="slider" class="slider"></label>
+
+    </header>
+
+    <!--Cuadro de encriptación-->
+    <main>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aqui" id="texto"></textarea>
+            <div class="encriptador-aviso">
+                <img class="imagen-aviso" src="./img/caution_6514911.png" alt="imagen aviso">
+                <p class="texto-aviso">Ingresar solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptador-contenedor">
+                <button class="boton-encriptar" type="submit">Encriptar</button>
+                <button class="boton-desencriptar" type="submit">Desencriptar</button>
+            </div>
+        </section>
+        <section class="tarjeta">
+            <div class="tarjeta-contenedor">
+                <img class="imagen-candado" src="/img/candado.png" alt="candado" id="candado">
+                <p class="text-one">Ningún mensaje fue encontrado</p>
+                <p class="text-two">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
+            <textarea class="evaluar" type="mensaje" readonly></textarea>
+            <button class="boton-copiar" type="submit">Copiar</button>
+        </section>
+    </main>
+
+    <footer>
+        <P class="rodapie">&copy;copyright 2024 - Encriptador de texto - desarrollado por Nelson Paniagua</P>
+    </footer>
+
+
+    <script src="./app.js">
+        
+
+    </script>
+
+
+</body>
+
+</html>

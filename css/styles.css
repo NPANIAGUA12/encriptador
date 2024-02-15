@@ -1,0 +1,529 @@
+/*Globales*/
+:root {
+    --font: #000000; 
+    --blanco: #FFFFFF;
+    --gray100: #ced4da;
+    --gray200: #adb5bd; 
+    --gray400:#495057; 
+    --gray500:#343a40;
+    --matrix:#42C920;
+
+    --fuentePrincipal:'Pixelify Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: "inter", sans-serif;
+    text-decoration: none;
+    background: var(--gray100);
+}
+
+::selection {
+    background: var(--gray500);
+    color: var(--blanco)
+}
+
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Header*/
+
+header {
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo {
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+/* boton slider*/
+
+#slider{
+    position:absolute;
+    top:20px;
+    left: 720px;
+}   
+
+.slider {
+    position: absolute;
+    top: 10px;
+    left: 710px;
+    display: inline-block;
+    width: 71px;
+    height: 40px;
+    background-color: #ccc;
+    border: 5px solid var(--blanco);
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+  
+input:checked + .slider {
+    background-color: var(--matrix);
+}
+  
+input:checked + .slider:before {
+    transform: translateX(29px);
+}
+
+
+
+.logo {
+    transition: transform 3s;
+}
+
+
+/*principal*/
+main {
+    display: flex;
+    flex-direction: row; 
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+   
+}
+
+.encriptador {
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+    
+}
+
+.encriptar {
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1px solid var(--gray100);
+    border-radius: 15px;
+    resize: none;
+    font-family: var(--fuentePrincipal);
+}
+
+.encriptar::placeholder, :focus {
+    color: var(--gray500);
+}
+
+
+.encriptador-aviso {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 480px;
+    
+}
+
+.imagen-aviso {
+    width: 3%;
+    animation: imagen-aviso 1s infinite; /*animación*/
+}
+
+/*animacion de pulso para la alerta*/
+@keyframes imagen-aviso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+
+.texto-aviso {
+    width: 100%;
+    font-family: var(--fuentePrincipal);
+    font-weight:400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.8;
+    color: var(--font);
+    
+}
+
+
+
+.encriptador-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px; 
+    position: absolute;
+    top: 526px;
+}
+
+.boton-encriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-family: var(--fuentePrincipal);
+    font-weight:400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--blanco);
+    background: var(--gray500);
+    border: 1px solid var(--gray500);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--font);
+    border:none ;
+}
+
+.boton-encriptar:active {
+    box-shadow: inset 2px 2px 4px var(--font),
+    inset -3px -4px 8px var(--gray400);
+    color: var(--blanco);
+    background: var(--gray400);
+}
+
+
+.boton-desencriptar {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    font-family: var(--fuentePrincipal);
+    font-weight:200;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: var(--font);
+    background: var(--gray200);
+    border: 1px solid var(--gray500);
+    border-radius: 24px;
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--font); 
+    border:none; 
+}
+
+.boton-desencriptar:active {
+    box-shadow: inset 2px 2px 4px var(--font),
+    inset -3px -4px 8px var(--gray400);
+    color: var(--blanco);
+    background: var(--gray400);
+}
+
+
+.tarjeta {
+    width: 270px;
+    height: 580px;
+    background: var(--blanco);
+    box-shadow: 10px 24px 32px -8px var(--font); 
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+    background: var(--blanco);
+    border:1px solid var(--gray100)
+    
+   
+}
+
+.imagen-candado {
+    position: relative;
+    left: 20px;
+    background: transparent; 
+}
+
+
+/* animacion imagen candado*/
+@keyframes movimientoArribaAbajo {
+    0%, 100% { top: 0px;}
+    50% {top:30px;}
+}
+
+.movimiento-arriba-abajo {
+    animation: movimientoArribaAbajo 0.3s ease-in-out infinite;
+}
+
+
+.tarjeta-contenedor {
+    position: absolute;
+    width: 230px;
+    margin-top: 30%; 
+    background: var(--blanco);
+}
+
+.text-one {
+    position: absolute;
+    left: 50px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color:var(--font);
+    background: var(--blanco);
+}
+
+.text-two {
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray400);
+    background: var(--blanco);
+
+}
+
+.evaluar{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left:0;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;  
+
+}
+
+.evaluar:focus {
+    outline: none;
+}
+
+.boton-copiar {
+    width: 200px;
+    height: 67px;
+    margin-top: 500px;
+    position: relative;
+    bottom: 0;
+    visibility: hidden;
+    padding: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    background: var(--gray500);
+    border: none;
+    border-radius: 20px; 
+    cursor: pointer;
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    box-shadow: 1px 10px 30px -5px var(--font);
+}
+
+.boton-copiar:active {
+    box-shadow: inset 2px 2px 4px var(--font),
+    inset -3px -4px 8px var(--gray400);
+    color: var(--font);
+    background: var(--gray200);
+}
+
+.boton-encriptar:hover, 
+.boton-desencriptar:hover,
+.boton-copiar:hover {
+    transform: scale(0.97);
+}
+
+footer {
+    margin-top: 1px;
+    padding: 50px;
+    border-top: 2px solid var(--gray500);
+    text-align: center;
+    height: 5px ;
+    background: var(--gray400);
+    background-color: rgba(0, 0, 0, 0.5 );
+    font-family: var(--fuentePrincipal);
+    font-weight: 600;
+    color: var(--gray400);
+    font-size: 20px;
+}
+.rodapie {
+    background: transparent;
+    color:var(--blanco)
+}
+
+/*Media*/
+
+@media (max-width: 1250px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } 
+
+    .encriptador {
+        margin:168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;    
+    }
+
+    .encriptador-contenedor {
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+    
+    .encriptador-aviso {
+        position: inherit;
+        margin: 15px; 
+    }
+    
+    .tarjeta {
+        width: 665px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .tarjeta-contenedor {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .imagen-candado {
+       
+        height: 150px;
+
+    }
+
+    .boton-copiar {
+        position: inherit;
+        width: 100%;
+    }
+    .evaluar {
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 780px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } 
+    header.logo {
+        width: 100%;
+        padding: 2px;
+    }
+
+    .slider {
+        position: absolute;
+        top:10px;
+        left:600px;
+    }
+    
+    #slider {
+        position: absolute;
+        top:10px;
+        left:620px;
+    }
+    
+
+    .encriptar {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .encriptador-contenedor {
+        display: grid;
+        gap: 21px;    
+    }
+
+    .tarjeta {
+        width: 90%;
+    }
+  
+}
+
+@media (max-width: 480px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } 
+    header.logo {
+        width: 100%;
+        padding: 2px;
+    }
+
+    .slider {
+        position: absolute;
+        top:10px;
+        left:250px;
+    }
+
+    #slider{
+        position: absolute;
+        top:10px;
+        left:260px;
+    }
+    
+
+
+    .encriptar {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .encriptador-contenedor {
+        display: grid;
+        gap: 21px;    
+    }
+
+    .tarjeta {
+        width: 90%;
+    }
+
+ 
+  
+}
