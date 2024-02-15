@@ -80,10 +80,10 @@ encriptar.addEventListener("click", e=> {
         } ,1500); 
     }
     else {
-        texto = texto.replace(/a/mg, "ai");
         texto = texto.replace(/e/mg, "enter");
-        texto = texto.replace(/i/mg, "imes");
         texto = texto.replace(/o/mg, "ober");
+        texto = texto.replace(/i/mg,"imes");
+        texto = texto.replace(/a/mg, "ai");
         texto = texto.replace(/u/mg, "ufat");
     } 
     
